@@ -1,9 +1,22 @@
 package ru.netology.domain;
 
+import lombok.Data;
+
 public class Conditioner {
     private int minTemperature = 15;
     private int maxTemperature = 30;
-    private int currentTemperature;
+    private int currentTemperature = 22;//(minTemperature +maxTemperature)/2;
+    private boolean on;
+
+    public Conditioner() {
+    }
+
+    public Conditioner(int minTemperature, int maxTemperature, int currentTemperature, boolean on) {
+        this.minTemperature = minTemperature;
+        this.maxTemperature = maxTemperature;
+        this.currentTemperature = currentTemperature;
+        this.on = on;
+    }
 
 
     public int getCurrentTemperature() {

@@ -1,12 +1,34 @@
 package ru.netology.domain;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@RequiredArgsConstructor
+
 
 class ConditionerTest {
+//    @Test
+//    public void setCurrentTemperature(){
+//        Conditioner conditioner= new Conditioner();
+//        conditioner.setCurrentTemperature(20);
+//        int actual =  conditioner.getCurrentTemperature();
+//        int expect = 22;
+//        assertEquals(expect,actual);
+//    }
+
+
+
+
     @Test
     public void shouldIncreaseSetCurrentTemperatureHigherMax() {
+
         Conditioner conditioner = new Conditioner();
         conditioner.setCurrentTemperature(31);
         conditioner.setIncreaseCurrentTemperature();
